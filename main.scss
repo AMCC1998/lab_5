@@ -1,0 +1,325 @@
+header {
+    padding: 0.8rem 0.5rem;
+    background-color: #212121;
+
+    .hero__menu {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+        }
+
+        li {
+            margin: 0rem 1rem;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: clamp(1rem, 3vw, 1.2rem);
+                font-weight: normal;
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                background-color: #fff;
+                z-index: 1;
+                margin-top: 1rem;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+                li {
+                    margin: 0;
+                    border-bottom: 1px solid #ddd;
+
+                    a {
+                        color: #333;
+                        font-size: 1.1rem;
+                        font-weight: normal;
+                        padding: 0.5rem 1rem;
+                        display: block;
+                    }
+                }
+            }
+
+            &:hover ul {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        a.dropdown {
+            &:after {
+                content: "\25BC";
+                font-size: 0.5em;
+                padding-left: 0.5rem;
+            }
+        }
+    }
+
+    .input {
+        visibility: hidden;
+    }
+
+    .label {
+        position: absolute;
+        background: lightgray;
+        width: 70px;
+        height: 30px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .circle {
+        position: absolute;
+        background: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        top: 3px;
+        left: 3px;
+        animation: toggleoff 0.4s linear forwards;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+        }
+    }
+
+    .input:checked + .label {
+        background-color: rgb(127, 127, 139);
+    }
+
+    .input:checked + .label .circle {
+        background-color: rgb(255, 255, 255);
+        animation: toggleon 0.4s linear forwards;
+    }
+
+    @keyframes toggleon {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(40px);
+        }
+    }
+
+    @keyframes toggleoff {
+        0% {
+            transform: translateX(40px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+
+    &.light-mode {
+        header {
+            background-color: #fff;
+
+            .hero__menu {
+                ul {
+                    li {
+                        a {
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-me {
+            background-color: rgba(#f9f9f9, 0.8);
+            color: black;
+
+            .about-me__title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                color: black;
+            }
+
+            .about-me__text {
+                font-size: 1.2rem;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+                color: black;
+            }
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    }
+
+    section {
+        padding: 4rem 2rem;
+    }
+
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    .about-me {
+        padding: 2rem 0;
+        //background-color: #f9f9f9;
+
+        .about-me__content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-me__title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .about-me__text {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            color: white;
+        }
+    }
+
+    .wrapper-calculadora {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+
+        & > div {
+            border-radius: 10px;
+            background-color: rgba(white, 0.5);
+            padding: 2rem;
+            text-align: center;
+
+            label {
+                display: block;
+            }
+
+            h2 {
+                margin-top: 0px;
+            }
+
+        }
+    }
+
+    .section-img {
+        display: flex;
+        justify-content: center;
+
+        & > div {
+            position: relative;
+        }
+
+        .section-img__footer {
+            background-color: white;
+            border-radius: 0px 0px 5px 5px;
+            padding: 0.5rem 1rem;
+            margin-top: -5px;
+        }
+
+        .section-img__texto_personalizado, .section-img__nome_personalizado {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -52%);
+            color: white;
+            font-weight: bold;
+        }
+
+        .section-img__nome_personalizado--left {
+            left: 2rem;
+            bottom: 2rem;
+            transform: none;
+            right: auto;
+        }
+
+        .section-img__nome_personalizado--right {
+            right: 2rem;
+            top: 2rem;
+            transform: none;
+            left: auto;
+        }
+
+    }
+
+    footer {
+        background-color: #212121;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+}
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.hero__content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0 2rem;
+}
+
+
+
+
