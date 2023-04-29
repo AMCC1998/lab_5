@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>André Carvalho | Home</title>
+    <meta name="author" content="André Carvalho">
+    <meta name="description" content="Tudo sobre Mim">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="André Carvalho">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+    <header>
+        <a class="link-menu-mobile">
+            <span class="middle-bar"></span>
+        </a>
+        <nav class="hero__menu">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#" class="dropdown">Sobre Mim</a>
+                    <ul>
+                        <li><a href="formacao.html">Formação</a></li>
+                        <li><a href="#">Experiência</a></li>
+                    </ul>
+                </li>
+                <li><a href="portfolio.html" class="hero__menu__item--active">Portfolio</a></li>
+                <li><a href="construcao.html">Blog</a></li>
+                <li><a href="construcao.html">Contato</a></li>
+                <li>
+                    <input type="checkbox" class="input" id="dark-mode" />
+                    <label for="dark-mode" class="label">
+                        <div class="circle"><span class="material-symbols-outlined dark-mode-icon">brightness_5</span>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="area-portfolio">
+        <video autoplay muted loop id="bg-video" preload="none" poster="assets/bg_video.jpg">
+            <source src="https://www.amccweb.com/ficheiros/imagens/base/bg_video.mp4" type="video/mp4">
+        </video>
+        <div class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">YouTube</h1>
+            </div>
+        </div>
+        <section>
+            <div class="galeria-videos">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/G2NmMDLgL_s"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ML5aOZrHt6c"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/vcmhvG8P4jw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/RWSNhVmlgCA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+            </div>
+        </section>
+        <h1 style="color:white; text-align: center;">Projetos</h1>
+
+        <section class="wrapper-projetos">
+            <div class="projeto-item">
+                <img loading="lazy" alt="André Carvalho - Plataforma Drone Fly Share"
+                    src="https://www.amccweb.com/ficheiros/imagens/base/projetos/drone_fly_share1.jpg">
+                <div class="wrapper-projeto__conteudo description" style="min-height: 189.35px;">
+                    <h3 class="wrapper-projeto__conteudo__nome-projeto">Plataforma Drone Fly Share</h3>
+                    <span class="wrapper-projeto__conteudo__descricao-projeto">A plataforma Drone Fly Share foi criada
+                        com o objetivo de partilha de locais de voo entre diferentes pilotos. </span>
+                </div>
+            </div>
+
+            <div class="projeto-item">
+                <img loading="lazy" alt="André Carvalho - Robô de Transporte"
+                    src="https://www.amccweb.com/ficheiros/imagens/base/projetos/robo.jpg">
+                <div class="wrapper-projeto__conteudo description" style="min-height: 214.95px;">
+                    <h3 class="wrapper-projeto__conteudo__nome-projeto">Robô de Transporte</h3>
+                    <span class="wrapper-projeto__conteudo__descricao-projeto">O Projeto do robô de transporte pretende
+                        ajudar no transporte de materiais ou objetos dentro de pavilhões</span>
+                </div>
+            </div>
+
+            <div class="projeto-item">
+                <img loading="lazy" alt="André Carvalho - Controlador Focus Stacking"
+                    src="https://www.amccweb.com/ficheiros/imagens/base/projetos/focus_stacking.jpg">
+                <div class="wrapper-projeto__conteudo description" style="min-height: 214.95px;">
+                    <h3 class="wrapper-projeto__conteudo__nome-projeto">Controlador Focus Stacking</h3>
+                    <span class="wrapper-projeto__conteudo__descricao-projeto">Controlador de slider e máquina
+                        fotográfica para Focus Stacking</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<footer>André Carvalho / a22100492 / ULHT Universidade Lusófona de Humanidades e Tecnologias / <span
+        class="Date"></span></footer>
+<script defer src="assets/main.js"></script>
+
+</html>
