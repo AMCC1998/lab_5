@@ -195,6 +195,10 @@ body .wrapper-calculadora > div h2 {
 body .section-img {
   display: flex;
   justify-content: center;
+  overflow: hidden;
+}
+body .section-img img {
+  max-width: 100%;
 }
 body .section-img > div {
   position: relative;
@@ -329,7 +333,7 @@ body footer {
   margin: 1rem 0 2rem;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 840px) {
   header {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
